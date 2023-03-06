@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="image" src="https://learn.seytech.co/assets/projects/js/dom-projects/light-switch/Lightoff.png" >
+    <script>
+        const lightoff ="https://learn.seytech.co/assets/projects/js/dom-projects/light-switch/Lightoff.png";
+        const lighton = "https://learn.seytech.co/assets/projects/js/dom-projects/light-switch/Lighton.png";
+        const turnOnOff = (event) => {
+            if(event.target.src === lightoff) {
+                event.target.src = lighton
+            } else {
+                event.target.src = lightoff
+
+            }
+        }
+        document.getElementById("image").addEventListener("click", turnOnOff)
+    </script>
+</body>
+</html>
